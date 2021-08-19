@@ -66,3 +66,7 @@ article,
 aside {
   flex-grow: 1;
 }
+
+.role {
+  color: #3a4c97;
+}
