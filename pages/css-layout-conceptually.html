@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS layout conceptually</title>
+    <link rel="stylesheet" href="../css/css-layout-conceptually.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header role="banner">
+        <p>&lt;header&gt;</p>
+        <p>Page Header</p>
+        <p>&lt;/header&gt;</p>
+      </header>
+      <section>
+        <main role="main">
+          <p>&lt;main&gt;</p>
+          <article>
+            <p>&lt;article&gt;</p>
+            <p>Main page content (article 1)</p>
+            <p>&lt;/article&gt;</p>
+          </article>
+          <article>
+            <p>&lt;article&gt;</p>
+            <p>Main page content (article 2)</p>
+            <p>&lt;/article&gt;</p>
+          </article>
+          <p>&lt;/main&gt;</p>
+        </main>
+        <div class="sidebar">
+          <p>&lt;div class="sidebar"&gt;</p>
+          <aside role="complementary">
+            <p>&lt;aside&gt;</p>
+            <p>
+              Related, <br />
+              but tangential<br />information
+            </p>
+            <p>&lt;/aside&gt;</p>
+          </aside>
+          <aside role="complementary">
+            <p>&lt;aside&gt;</p>
+            <p>
+              More related, <br />
+              but tangential <br />
+              information
+            </p>
+            <p>&lt;/aside&gt;</p>
+          </aside>
+          <p>&lt;/div&gt;</p>
+        </div>
+      </section>
+      <footer role="contentinfo">
+        <p>&lt;footer&gt;</p>
+        <p>Page Footer</p>
+        <p>&lt;/footer&gt;</p>
+      </footer>
+    </div>
+  </body>
+</html>
