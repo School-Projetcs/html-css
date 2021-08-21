@@ -7,25 +7,52 @@
     <title>Accessibility</title>
   </head>
   <body>
-    <h1>My heading</h1>
-    <p lang="pt-ao">
-      Esta parte está em <abbr title="Português Angola">pt-ao</abbr>
-    </p>
-    <p>I'll add another paragraph here too.</p>
-    <ol>
-      <li>Here is</li>
-      <li>a list for</li>
-      <li>you to read</li>
-    </ol>
-    <h2>My subheading</h2>
+    <h1>Links</h1>
     <p>
-      This is the first subsection of my document. I'd love people to be able to
-      find this content!
+      This is a link to
+      <a href="https://www.mozilla.org" title="Go to mozilla's official website"
+        >Mozilla</a
+      >.
     </p>
-    <h2>My 2nd subheading</h2>
     <p>
-      This is the second subsection of my content. I think is more interesting
-      than the last one.
+      Another link, to the
+      <a
+        href="https://developer.mozilla.org"
+        title="Go to mozilla's developer official website"
+        >Mozilla Developer Network</a
+      >.
     </p>
+    <h2>Buttons</h2>
+    <p>
+      <button data-message="This is from the first button">
+        Click me to do something
+      </button>
+      <button data-message="This is from the second button">
+        Click me too!
+      </button>
+      <button data-message="This is from the third button">
+        Click here too to do something
+      </button>
+    </p>
+    <h2>Form</h2>
+    <form>
+      <div>
+        <label for="name">Fill in your name:</label>
+        <input type="text" id="name" name="name" />
+      </div>
+      <div>
+        <label for="age">Enter your age:</label>
+        <input type="text" id="age" name="age" />
+      </div>
+      <div>
+        <label for="mood">Choose your mood:</label>
+        <select id="mood" name="mood">
+          <option>Happy</option>
+          <option>Sad</option>
+          <option>Angry</option>
+          <option>Worried</option>
+        </select>
+      </div>
+    </form>
   </body>
 </html>
