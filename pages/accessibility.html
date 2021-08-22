@@ -7,40 +7,25 @@
       name="description"
       content="provide help about our products and support"
     />
-    <title>HTML Accessibility: Task 1</title>
-    <link rel="stylesheet" href="../css/html-accessibility-one.css" />
+    <title>HTML Accessibility: Task 2</title>
+    <link rel="stylesheet" href="../css/html-accessibility-tasks.css" />
   </head>
   <body>
-    <main>
-      <h1>Need help?</h1>
-      <p>
-        If you have any problems with our products, our support center can offer
-        you all the help you need, whether you want:
-      </p>
-      <ol>
-        <li>Advice choosing a new product</li>
-        <li>Tech support on an existing product</li>
-        <li>Refund and cancellation assistance</li>
-      </ol>
-      <section>
-        <h2>Contact us now</h2>
-        <p>
-          Our help center contains live chat, e-mail addresses, and phone
-          numbers.
-        </p>
-        <button data-message="This is to find details about contact">
-          Find Contact Details
-        </button>
-      </section>
-      <section>
-        <h2>Find out answers</h2>
-        <p>
-          Our Forums section contains a large knowledge base of searchable
-          previously asked questions, and you can always ask a new question if
-          you can't find the answer you're looking for.
-        </p>
-        <button data-message="This is to access forums">Access Forums</button>
-      </section>
-    </main>
+    <form title="Personal Information">
+      <ul>
+        <li title="name">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" />
+        </li>
+        <li title="age">
+          <label for="age">Age</label>
+          <input type="text" id="age" name="age" />
+        </li>
+        <li title="email address">
+          <label for="email">Email Address</label>
+          <input type="text" id="email" name="email" />
+        </li>
+      </ul>
+    </form>
   </body>
 </html>
