@@ -1,0 +1,21 @@
+body {
+  background-color: #fff;
+  color: #333;
+  font: 1em / 1.4 Helvetica Neue, Helvetica, Arial, sans-serif;
+  padding: 1em;
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+button {
+  color: white;
+  background-color: blue;
+  border-radius: 10px;
+  width: 170px;
+  padding: 10px;
+  text-align: center;
+  border: unset;
+}
