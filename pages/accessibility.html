@@ -1,30 +1,72 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="provide help about our products and support"
-    />
-    <title>HTML Accessibility: Task 3</title>
-    <link rel="stylesheet" href="../css/html-accessibility-tasks.css" />
+
+    <title>Random quotes</title>
+
+    <style>
+      html {
+        font-family: sans-serif;
+      }
+
+      h1 {
+        letter-spacing: 2px;
+      }
+
+      p {
+        line-height: 1.6;
+      }
+
+      section {
+        padding: 10px;
+        width: 400px;
+        background: #666;
+        text-shadow: 1px 1px 1px black;
+        color: white;
+        min-height: 150px;
+      }
+    </style>
   </head>
+
   <body>
-    <main role="main">
-      <p>
-        For more information about our activities, check out our
-        <a href="/fundraising" title="Go to fundraising pages"
-          name="fundraising page">fundraising page</a
-        >,
-        <a href="/education" title="Go to education's page">education page</a>,
-        <a href="/resources/sponsorship.pdf" title="Download the sponsorship pdf file"
-          name="sponsorship pack">sponsorship pack </a
-        >, and
-        <a href="/resources/assessments.docx" title="Download the assessment sheets docx file format" name="assessment sheets"
-          >assessment sheets </a
-        >.
-      </p>
-    </main>
+    <section>
+      <h1>Random quote</h1>
+      <blockquote>
+        <p></p>
+      </blockquote>
+    </section>
+    <script>
+      const quotePara = document.querySelector("section p");
+
+      let quoteJson;
+
+      getQuotes("quotes.json", populateJson);
+
+      let intervalID = window.setInterval(showQuote, 10000);
+
+      function getQuotes(url, callback) {
+        let request = new XMLHttpRequest();
+        request.open("GET", url);
+        request.responseType = "json";
+        request.send();
+
+        request.onreadystatechange = function () {
+          if (request.readyState === 4 && request.status === 200) {
+            callback(request.response);
+          }
+        };
+      }
+
+      function populateJson(response) {
+        quoteJson = response;
+      }
+
+      function showQuote() {
+        var random = Math.floor(Math.random() * 25);
+        quotePara.textContent =
+          quoteJson[random].quote + " -- " + quoteJson[random].author;
+      }
+    </script>
   </body>
 </html>
