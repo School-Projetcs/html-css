@@ -1,207 +1,59 @@
-.page {
-  margin: 0 auto;
-  width: 960px;
-}
-
-.container {
-  overflow: hidden;
-}
-
-img[alt="Sunny East Garden"] {
-  max-width: 580px;
-}
-
-img[alt="logo"] {
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-}
-
-img[src="./assets/planets.jpeg"] {
-  max-width: 400px;
-}
-
-img[alt="Cat image"] {
-  max-width: 280px;
-}
-
-img[alt="world map"] {
-  max-width: 258px;
-}
-
-main {
-  width: 600px;
-  float: left;
-  border-right: 1px solid #c8c8c8;
-  padding-right: 20px;
-}
-
-main img {
-  max-width: 600px;
-}
-
-.sidebar {
-  width: 300px;
-  float: right;
-  margin-top: 1.875em;
-}
-
-.sidebar ul {
-  list-style: none;
-}
-
-.social-sites li {
-  display: inline;
-}
-
-.nav-main {
-  border-top: 5px solid #019443;
-  border-bottom: 1px solid #c8c8c8;
-  padding: 0.45em 0 0.5em; /* 7px 0 8px */
-}
-
-.nav-main li {
-  border-left: 5px solid #c8c8c8;
-  display: inline-block;
-}
-
-.nav-main li:first-child {
-  border-left: none;
-}
-
-.nav-main a {
-  color: #292929;
-  display: inline-block;
-  font: 700 1.125em "Open Sans", sans-serif;
-  padding: 0.5em 1.15em 0.5em 1.4em;
-  text-transform: uppercase;
-}
-
-.about {
-  color: #fff;
-  background-color: #2b2b2b;
-  padding: 0.3125em 0.625em 0.625em;
-}
-
-.about img {
-  border: 5px solid #bebebe;
-}
-
-.about h2,
-.mod h2 {
-  font-size: 0.875em;
-}
-
-.about h2,
-.mod h2 {
-  font-family: "Open Sans", sans-serif;
-  font-weight: 700;
-  text-transform: uppercase;
-}
-
-.mod h2 {
-  border-bottom: 1px solid #dbdbdb;
-  padding-bottom: 0.75em;
-}
-
-.footer p {
-  font-size: 0.6875em;
-}
-
-h1 {
-  color: #212121;
-  font-family: "Lato", sans-serif;
-  font-size: 3.25em; /* 36px/16px */
-  font-weight: 300;
-  letter-spacing: -2px;
-  line-height: 0.975;
-  margin-bottom: 0.4125em; /* 21.45px */
-}
-
-.map {
-  margin: 1.4375em 0 0.8125em;
-  /* 23px 0 13px */
-}
-
-.links {
-  margin: 1.5em 0 4.125em;
-  /* 24px 0 66px */
-  padding: 0;
-}
-
-.links li {
-  margin-bottom: 1.1em;
-}
-
-.post-photo {
-  float: left;
-  margin-bottom: 2px;
-  margin-right: 22px;
-}
-/*if u uncomment this you should remove overflow:hidden; from .container*/
-/* footer[role="contentinfo"] {
-  clear: both;
-} */
-
-.social-sites li {
-  background-color: yellowgreen;
-  border: none;
-  border-radius: 50%;
-  padding: 3px 5px;
-}
-
-.social-sites li a {
-  font-family: sans-serif;
-  color: #fff;
-  font-size: 12px;
-  font-weight: 700;
-}
-
-.masterhead {
+/* The element to apply the animation*/
+div {
+  width: 100px;
+  height: 100px;
   position: relative;
+  background-color: red;
+  /* animation-name: example;
+  animation-duration: 4s;
+  animation-iteration-count: 5;
+  animation-delay: -1s;
+  animation-direction: alternate-reverse; */
+  animation-fill-mode: both;
+  animation-play-state: running;
+  animation: example 4s linear -1s infinite alternate-reverse;
 }
 
-.masterhead .social-sites {
-  position: absolute;
-  top: 21px;
-  right: 0;
+div:hover {
+  animation-play-state: paused;
 }
 
-.nav-main a:hover {
-  color: #747474;
-  cursor: pointer;
-}
+/* The animation code */
+@keyframes example {
+  0% {
+    background-color: red;
+    left: 0px;
+    top: 0px;
+    /* transition: border-radius; */
+    border-radius: 10%;
+  }
 
-.pagination {
-  padding-left: 0;
-  list-style: none;
-}
+  25% {
+    border-radius: 20%;
+    background-color: yellow;
+    left: 200px;
+    top: 0px;
+  }
 
-.pagination li {
-  display: inline;
-}
+  50% {
+    border-radius: 30%;
+    background-color: blue;
+    left: 200px;
+    top: 200px;
+  }
 
-.pagination li:first-child a {
-  color: red;
-}
+  75% {
+    border-radius: 40%;
+    background-color: green;
+    left: 0px;
+    top: 200px;
+    transform: rotate(360deg);
+  }
 
-.pagination li:last-child a {
-  text-transform: capitalize;
-}
-
-p {
-  text-align: justify;
-}
-
-.footer {
-  border-top: 1px solid #c8c8c8;
-  border-bottom: 1px solid #c8c8c8;
-}
-
-footer[role="contentinfo"] {
-  border-bottom: none;
-}
-
-footer[role="contentinfo"] p {
-  text-align: center !important;
+  100% {
+    border-radius: 50%;
+    background-color: red;
+    left: 0px;
+    top: 0px;
+  }
 }
