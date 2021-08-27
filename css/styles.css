@@ -1,59 +1,21 @@
-/* The element to apply the animation*/
-div {
+.flex-container {
+  background-color: dodgerblue;
+  height: 100vh;
+  display: flex;
+  /* flex-direction: column; */
+  flex-wrap: wrap;
+  /* flex-flow: row wrap; */
+  justify-content: space-between;
+  align-items: flex-end;
+  align-content: flex-end;
+}
+
+.flex-container > div {
+  background-color: #f1f1f1;
   width: 100px;
-  height: 100px;
-  position: relative;
-  background-color: red;
-  /* animation-name: example;
-  animation-duration: 4s;
-  animation-iteration-count: 5;
-  animation-delay: -1s;
-  animation-direction: alternate-reverse; */
-  animation-fill-mode: both;
-  animation-play-state: running;
-  animation: example 4s linear -1s infinite alternate-reverse;
-}
-
-div:hover {
-  animation-play-state: paused;
-}
-
-/* The animation code */
-@keyframes example {
-  0% {
-    background-color: red;
-    left: 0px;
-    top: 0px;
-    /* transition: border-radius; */
-    border-radius: 10%;
-  }
-
-  25% {
-    border-radius: 20%;
-    background-color: yellow;
-    left: 200px;
-    top: 0px;
-  }
-
-  50% {
-    border-radius: 30%;
-    background-color: blue;
-    left: 200px;
-    top: 200px;
-  }
-
-  75% {
-    border-radius: 40%;
-    background-color: green;
-    left: 0px;
-    top: 200px;
-    transform: rotate(360deg);
-  }
-
-  100% {
-    border-radius: 50%;
-    background-color: red;
-    left: 0px;
-    top: 0px;
-  }
+  margin: 10px;
+  text-align: center;
+  line-height: 75px;
+  font-size: 30px;
+  border-radius: 4px;
 }
