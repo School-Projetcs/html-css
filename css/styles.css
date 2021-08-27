@@ -1,21 +1,31 @@
 .flex-container {
-  background-color: dodgerblue;
-  height: 100vh;
+  background-color: #cacaca;
   display: flex;
-  /* flex-direction: column; */
-  flex-wrap: wrap;
-  /* flex-flow: row wrap; */
-  justify-content: space-between;
-  align-items: flex-end;
-  align-content: flex-end;
 }
 
 .flex-container > div {
-  background-color: #f1f1f1;
+  color: #f1f1f1;
+  background-color: dodgerblue;
   width: 100px;
   margin: 10px;
   text-align: center;
   line-height: 75px;
-  font-size: 30px;
-  border-radius: 4px;
+  font-size: 40px;
+}
+
+.flex-container > div:nth-of-type(1) {
+  /* flex-grow: 1; */
+  /* flex-shrink: 8; */
+}
+.flex-container > div:nth-of-type(2) {
+  /* flex-grow: 2.1; */
+  flex-shrink: 0;
+  flex-grow: 20;
+}
+.flex-container > div:nth-of-type(3) {
+  /* flex-grow: 8; */
+  /* flex-shrink: 1; */
+}
+.flex-container > div:nth-of-type(4) {
+  display: none;
 }
