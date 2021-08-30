@@ -47,8 +47,13 @@ section.colors-legends {
 }
 
 .color-legend-item {
+  cursor: pointer;
   display: flex;
   align-items: center;
+}
+
+.color-legend-item:hover {
+  opacity: 0.6;
 }
 
 .color-legend-item > p {
