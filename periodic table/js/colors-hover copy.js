@@ -34,30 +34,31 @@ document
   .querySelector("div.color-all-elements")
   .parentElement.addEventListener("click", () => {
     colorsClass.map((colorClass, index) => {
+      // console.log(colorClass);
       document.querySelectorAll(`button${colorClass}`).forEach((item) => {
+        // console.log(colors[index]);
         item.style.backgroundColor = colors[index];
+        console.log(item);
       });
     });
   });
 
 legendColors.forEach((legendColor) => {
-  if (legendColor.children[0].classList[0] !== "color-all-elements") {
-    legendColor.addEventListener("click", () => {
-      const classList = legendColor.children[0].classList[0];
-      const filteredColors = colorsClass.filter(
-        (color) => color !== `.${classList}`
-      );
+  legendColor.addEventListener("click", () => {
+    const classList = legendColor.children[0].classList[0];
+    const filteredColors = colorsClass.filter(
+      (color) => color !== `.${classList}`
+    );
 
-      filteredColors.forEach((color) => {
-        document.querySelectorAll(`button${color}`).forEach((item) => {
-          item.style.backgroundColor = "#fff";
-        });
-      });
+    document.querySelectorAll(`button.${classList}`).forEach((element) => {
+      element.style.backgroundColor =
+        colors[colorsClass.indexOf(`.${classList}`)];
+    });
 
-      document.querySelectorAll(`button.${classList}`).forEach((element) => {
-        element.style.backgroundColor =
-          colors[colorsClass.indexOf(`.${classList}`)];
+    filteredColors.forEach((color) => {
+      document.querySelectorAll(`button${color}`).forEach((item) => {
+        item.style.backgroundColor = "#fff";
       });
     });
-  }
+  });
 });

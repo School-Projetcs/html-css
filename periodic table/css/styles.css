@@ -216,3 +216,7 @@ footer[role="contentinfo"] {
   text-align: center;
 }
 /* end footer page */
+
+strong {
+  font-weight: bold;
+}
