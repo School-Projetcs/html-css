@@ -6,12 +6,14 @@ const tags = document.querySelectorAll(".tag-element");
 cardPane.addEventListener("click", function () {
   const cardContainer = document.querySelector("div.card-container");
   cardContainer.style.display = "none";
+  document.body.style.display = "block";
 });
 
 tags.forEach(function (tag) {
   tag.addEventListener("click", () => {
     const cardContainer = document.querySelector("div.card-container");
     cardContainer.style.display = "flex";
+    document.body.style.display = "flex";
 
     const elementColumn = tag.parentElement.classList[0];
     const abbr = tag.children[0].textContent;

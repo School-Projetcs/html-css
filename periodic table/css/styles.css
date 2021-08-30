@@ -1,7 +1,13 @@
 body {
-  display: flex;
+  position: relative;
   flex-direction: column;
   align-items: center;
+  overflow-x: auto;
+}
+
+main.periodic-table {
+  margin: auto;
+  width: 1296px;
 }
 
 /* ==== HEADER ==== */
@@ -184,5 +190,6 @@ footer.footer-elements {
 footer[role="contentinfo"] {
   margin-top: 60px;
   padding-bottom: 30px;
+  text-align: center;
 }
 /* end footer page */
