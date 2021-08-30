@@ -30,20 +30,26 @@ const colors = [
 
 const legendColors = document.querySelectorAll(".color-legend-item");
 
-legendColors.forEach((legendColor) => {
-  legendColor.addEventListener("mouseout", () => {
+document
+  .querySelector("div.color-all-elements")
+  .parentElement.addEventListener("click", () => {
     colorsClass.map((colorClass, index) => {
       document.querySelectorAll(`button${colorClass}`).forEach((item) => {
         item.style.backgroundColor = colors[index];
       });
     });
   });
-  legendColor.addEventListener("mouseover", () => {
+
+legendColors.forEach((legendColor) => {
+  legendColor.addEventListener("click", () => {
     const classList = legendColor.children[0].classList[0];
-    console.log(classList);
+    // console.log(classList);
     const filteredColors = colorsClass.filter(
       (color) => color !== `.${classList}`
     );
+
+    document.querySelector(`button.${classList}`).style.backgroundColor =
+      colors[colorsClass.indexOf(`.${classList}`)];
 
     filteredColors.forEach((color) => {
       document.querySelectorAll(`button${color}`).forEach((item) => {

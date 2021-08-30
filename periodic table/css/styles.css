@@ -71,6 +71,24 @@ section.colors-legends {
 /* end legend colors items */
 
 /* ==== LEGENDS COLORS ==== */
+.color-all-elements {
+  background-image: linear-gradient(
+    to right,
+    #ff9f02,
+    #fed650,
+    #ff7143,
+    #feb2b2,
+    #64b5f6,
+    #bbdefa,
+    #8493ca,
+    #48c569,
+    #a7e4bb,
+    #d4e388,
+    #bd91ff,
+    #e4d3ff
+  );
+}
+
 .color-basic-html {
   background-color: #ff9f02;
 }
