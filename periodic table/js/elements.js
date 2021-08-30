@@ -7,8 +7,8 @@ const elements = {
       def: "Defines the document type",
       attr: [
         {
-          name: "attr name",
-          def: "",
+          name: "html",
+          def: "defines ",
         },
       ],
     },
@@ -20,7 +20,11 @@ const elements = {
       attr: [
         {
           name: "attr name",
-          def: "",
+          def: "some",
+        },
+        {
+          name: "attr name 2",
+          def: "some 2",
         },
       ],
     },

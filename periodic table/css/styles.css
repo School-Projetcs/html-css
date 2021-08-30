@@ -102,6 +102,7 @@ section.colors-legends {
 button.tag-element {
   width: 70px;
   height: 70px;
+  padding: 0 5px;
   border: none;
   border-radius: 3px;
   position: relative;
@@ -177,4 +178,11 @@ footer.footer-elements {
   margin-top: 40px;
   margin-left: 144px;
 }
-/* third column */
+/* end footer elements */
+
+/* ==== FOOTER PAGE ==== */
+footer[role="contentinfo"] {
+  margin-top: 60px;
+  padding-bottom: 30px;
+}
+/* end footer page */
