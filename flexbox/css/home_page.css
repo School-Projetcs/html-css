@@ -1,0 +1,116 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  padding: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* ==== header[role="banner"] ====*/
+header[role="banner"] {
+  background-color: #05ad70;
+  padding: 16px;
+  color: #ffffff;
+}
+/* end header[role="banner"] */
+
+div.container {
+  display: flex;
+  flex: 100%;
+  margin: 16px 0;
+}
+
+/* ==== aside left ====*/
+aside.aside-left {
+  flex: 25%;
+}
+
+aside.aside-left > nav > ul {
+  list-style: none;
+  padding: 0;
+}
+
+aside.aside-left > nav > ul > li > a {
+  text-decoration: none;
+  color: #090909;
+  display: block;
+  width: 100%;
+  padding: 6px;
+  background-color: #f1f1f1;
+}
+
+aside.aside-left > nav > ul > li:not(:last-of-type) {
+  margin-bottom: 5px;
+}
+
+aside.aside-left > nav > ul > li > a[active="true"] {
+  color: #ffffff;
+  background-color: #05ab6d;
+}
+
+aside.aside-left > nav > ul > li > a:not([active="true"]):hover {
+  transition: background-color 0.1s;
+  cursor: pointer;
+  background-color: rgba(5, 173, 112, 0.4);
+}
+
+/* end aside left */
+
+/* ==== main ====*/
+main[role="main"] {
+  text-align: justify;
+  flex: 50%;
+  padding: 28px 16px 10px;
+}
+
+main[role="main"] > h1,
+main[role="main"] > h2 {
+  margin-bottom: 16px;
+  text-align: left;
+  text-transform: capitalize;
+}
+
+main[role="main"] > section {
+  margin-top: 26px;
+}
+/* end main */
+
+/* ==== aside right ====*/
+aside[role="complementary"].aside-right {
+  flex: 25%;
+  padding: 16px;
+  color: #ffffff;
+  background-color: #33a4e8;
+}
+/* end aside right */
+
+/* ==== footer[role="contentinfo"] ====*/
+footer[role="contentinfo"] {
+  padding: 16px;
+  text-align: center;
+  background-color: #f1f1f1;
+}
+/* end footer[role="contentinfo"] */
+
+header[role="banner"],
+aside.aside-left > nav > ul > li > a,
+aside[role="complementary"].aside-right,
+footer {
+  border-radius: 4px;
+}
+
+/* ==== Responsive ====*/
+@media screen and (max-width: 800px) {
+  div.container {
+    flex-direction: column;
+  }
+  aside.aside-left > nav {
+    text-align: center;
+  }
+}
+/* end responsive*/

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Dálcio Macuete Garcia" />
+    <title>Home Page</title>
+    <link rel="stylesheet" href="../css/home_page.css" />
+  </head>
+  <body>
+    <!-- ==== Header[role="banner"] Start ====-->
+    <header role="banner">
+      <h1>Welcome to My Home Page</h1>
+      <p>Sit consequat mollit est veniam.</p>
+    </header>
+    <!-- end header[role="banner"] -->
+    <div class="container">
+      <!-- ==== Aside Left Start ====-->
+      <aside class="aside-left">
+        <nav role="navigation">
+          <ul>
+            <li><a href="#1" active="true">Stylesheet 1</a></li>
+            <li><a href="#2" active="false">Stylesheet 2</a></li>
+            <li><a href="#3" active="false">Stylesheet 3</a></li>
+            <li><a href="#4" active="false">Stylesheet 4</a></li>
+            <li><a href="#no" active="false">No Stylesheet</a></li>
+          </ul>
+        </nav>
+      </aside>
+      <!-- end aside left -->
+      <!-- ==== Main Start ====-->
+      <main role="main">
+        <h1>Same Page Different stylesheets</h1>
+        <p>
+          Tempor fugiat eiusmod voluptate fugiat sunt sint ullamco aute laborum.
+          Sunt nulla proident officia fugiat in ullamco labore deserunt laboris
+          elit eiusmod excepteur. Est anim esse irure minim elit ullamco dolor
+          tempor qui veniam. Ipsum cupidatat veniam fugiat culpa.
+        </p>
+        <section>
+          <h2>No styles</h2>
+          <p>
+            Labore proident aliqua ex occaecat. Aute culpa cupidatat in qui
+            aliquip. Est proident nisi Lorem pariatur enim et id nisi voluptate
+            deserunt. Elit nostrud deserunt enim quis sint tempor qui amet do
+            est irure laboris ut adipisicing. Id do consectetur aliqua eu
+            consequat consectetur dolor laboris elit sint ex officia ullamco.
+          </p>
+        </section>
+      </main>
+      <aside class="aside-right" role="complementary">
+        <h3>Side Bar</h3>
+        <p>
+          Consequat non labore officia enim ipsum dolor ut ipsum ad. Magna
+          commodo et minim nisi proident irure.
+        </p>
+      </aside>
+    </div>
+    <!-- ==== Footer Start ====-->
+    <footer role="contentinfo">
+      <p>
+        Id id mollit sunt consequat exercitation id adipisicing proident ullamco
+        id nostrud sit excepteur enim.
+      </p>
+    </footer>
+    <!-- end footer -->
+    <script>
+      const a = document.querySelectorAll("nav[role=navigation] > ul > li > a");
+      let active = 0;
+      a.forEach((link, index) => {
+        link.addEventListener("click", function () {
+          link.setAttribute("active", "true");
+          a.forEach((_link, _index) => {
+            if (_index !== index) {
+              _link.setAttribute("active", "false");
+            }
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
