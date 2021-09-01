@@ -1,0 +1,48 @@
+body {
+  margin: 0;
+}
+
+.container {
+  display: flex;
+}
+
+.container > .colum {
+  flex: 50%;
+  display: flex;
+}
+
+.container > .colum > .colum {
+  flex: 50%;
+  display: flex;
+  flex-direction: column;
+  flex-flow: wrap;
+  margin: 5px;
+}
+
+img {
+  margin: 5px;
+  width: 100%;
+  transition: transform 1s ease-in-out;
+}
+
+img:hover {
+  cursor: pointer;
+  transform: scale(2);
+}
+
+/* Responsive*/
+
+@media screen and (max-width: 700px) {
+  .container > .colum {
+    flex-direction: column;
+  }
+  .container > .colum > .colum {
+    flex-grow: 100%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .container {
+    flex-direction: column;
+  }
+}
