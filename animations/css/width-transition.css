@@ -1,0 +1,26 @@
+.width-transition {
+  margin-left: 16px;
+  align-self: flex-start;
+}
+
+.top-box,
+.bottom-box {
+  width: 80px;
+  height: 80px;
+}
+
+.top-box {
+  background-color: indigo;
+  transition: width 1s;
+}
+
+.bottom-box {
+  background-color: indianred;
+  margin-top: 16px;
+  transition: width 1s 1s;
+}
+
+.width-transition:hover > .top-box,
+.width-transition:hover > .bottom-box {
+  width: 200px;
+}
