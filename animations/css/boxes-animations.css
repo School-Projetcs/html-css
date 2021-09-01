@@ -29,7 +29,7 @@ body {
   left: 0;
   background-color: #8a2be2;
   transform-origin: left top;
-  border-top-left-radius: 100%;
+  border-top-left-radius: 50%;
 }
 
 .top-right {
@@ -37,7 +37,7 @@ body {
   right: 0;
   background-color: #6495ed;
   transform-origin: right top;
-  border-top-right-radius: 100%;
+  border-top-right-radius: 50%;
 }
 
 .bottom-left {
@@ -45,7 +45,7 @@ body {
   left: 0;
   background-color: #008b8b;
   transform-origin: bottom left;
-  border-bottom-left-radius: 100%;
+  border-bottom-left-radius: 50%;
 }
 
 .bottom-right {
@@ -53,17 +53,35 @@ body {
   right: 0;
   background-color: deeppink;
   transform-origin: bottom right;
-  border-bottom-right-radius: 100%;
+  border-bottom-right-radius: 50%;
 }
 
 .boxes-container:hover > .bottom-left,
 .boxes-container:hover > .top-right {
   transform: rotate(-90deg);
-  border-radius: 0;
 }
 
 .boxes-container:hover > .bottom-right,
 .boxes-container:hover > .top-left {
   transform: rotate(90deg);
-  border-radius: 0;
+}
+
+.boxes-container:hover > .top-right {
+  transform: rotate(-90deg);
+  border-bottom-left-radius: 50%;
+}
+
+.boxes-container:hover > .top-left {
+  transform: rotate(90deg);
+  border-bottom-right-radius: 50%;
+}
+
+.boxes-container:hover > .bottom-left {
+  transform: rotate(-90deg);
+  border-top-right-radius: 50%;
+}
+
+.boxes-container:hover > .bottom-right {
+  transform: rotate(90deg);
+  border-top-left-radius: 50%;
 }
