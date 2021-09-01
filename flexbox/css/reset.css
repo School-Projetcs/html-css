@@ -6,31 +6,12 @@
   box-sizing: border-box;
 }
 
-article,
-aside,
-figcaption,
-figure,
-footer,
-header,
-main,
-nav,
-section {
-  display: block;
-}
-
-html {
-  /* text-size-adjust: 100%; */
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-  -moz-text-size-adjust: 100%;
-}
-
 body {
   margin: 0;
 }
 
 a:focus {
-  outline: thin dotted;
+  outline: none;
 }
 
 a:link {
@@ -39,19 +20,5 @@ a:link {
 
 a:active,
 a:hover {
-  outline: 0;
-}
-
-small {
-  font-size: 80%;
-}
-
-img {
-  border: 0;
-}
-
-input:active,
-input:focus,
-input:hover {
   outline: 0;
 }

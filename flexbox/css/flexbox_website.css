@@ -1,0 +1,133 @@
+body {
+  border: 6px solid #e0e0e0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+/* ==== Header banner ==== */
+header[role="banner"] > div > h1,
+header[role="banner"] > div > p,
+header[role="banner"] > nav > ul {
+  margin: 0;
+}
+
+header[role="banner"] > div {
+  color: #fff;
+  background-color: #19bc9c;
+  text-align: center;
+  padding: 30px 0;
+}
+
+header[role="banner"] > nav {
+  background-color: #333333;
+}
+
+header[role="banner"] > nav > ul {
+  list-style: none;
+  display: flex;
+  padding: 0;
+}
+
+header[role="banner"] > nav > ul > li:hover {
+  background-color: #aaa;
+}
+
+header[role="banner"] > nav > ul > li > a {
+  display: inline-flex;
+  padding: 16px;
+  color: #fff;
+  text-transform: capitalize;
+}
+
+header[role="banner"] > nav > ul > li:hover > a {
+  color: #333333;
+}
+
+/* end header */
+
+/* ==== div[class="container"] ==== */
+div.container {
+  display: flex;
+}
+
+aside.about-me {
+  flex-grow: 30%;
+  min-width: 200px;
+  padding: 16px;
+  background-color: #f1f1f1;
+}
+
+/**main**/
+main[role="main"] {
+  flex-grow: 70%;
+  padding: 16px;
+}
+
+main[role="main"] > article:not(:first-of-type) {
+  margin-top: 50px;
+}
+
+/* end div[class="container"] */
+
+/* ==== Fake images ==== */
+div.fake-image {
+  width: 100%;
+  padding: 20px;
+  background-color: #aaaaaa;
+  position: relative;
+  overflow: hidden;
+}
+
+div.fake-image.small {
+  height: 60px;
+}
+
+div.fake-image.small:not(:last-of-type) {
+  margin-bottom: 16px;
+}
+
+div.fake-image.medium {
+  height: 200px;
+}
+/* end fake images */
+
+/* ==== Footer contentinfo ==== */
+footer[role="contentinfo"] {
+  background-color: #dddddd;
+  padding: 20px 0;
+  text-align: center;
+}
+/* end footer contentinfo */
+
+/** Responsive **/
+@media screen and (max-width: 700px) {
+  header[role="banner"] > nav > ul {
+    text-align: center;
+  }
+  header[role="banner"] > nav > ul,
+  div.container {
+    flex-direction: column;
+  }
+}
+/* end responsive */
+/** Animation **/
+div.fake-image:before {
+  content: "";
+  position: absolute;
+  background-color: #778899;
+  transition: opacity 0.5s;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  left: 0;
+  animation: swimmer-effect 1s linear infinite alternate;
+}
+
+@keyframes swimmer-effect {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    /* transform: translateX(100%); */
+    opacity: 1;
+  }
+}
+/* end animations */
