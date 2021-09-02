@@ -61,3 +61,7 @@ img {
   transform: rotate(40deg) scale(1.2);
   z-index: 1;
 }
+
+img:hover {
+  border: 2px solid red;
+}
