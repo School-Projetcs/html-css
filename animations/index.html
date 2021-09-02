@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="./css/boxes-animations.css" />
     <link rel="stylesheet" href="./css/width-transition.css" />
     <link rel="stylesheet" href="./css/move-square.css" />
+    <link rel="stylesheet" href="./css/rotating-boxes.css" />
   </head>
   <body>
     <div class="boxes-container">
@@ -22,5 +23,30 @@
       <div class="top-box"></div>
       <div class="bottom-box"></div>
     </div>
+    <div class="box-state rotate-boxes-container">
+      <div class="box-state inner-box">
+        <div class="box-state inner-inner-box">Rotating</div>
+      </div>
+    </div>
+    <script>
+      const spinners = document.querySelectorAll("div.box-state");
+
+      spinners[0].addEventListener("click", () => {
+        if (
+          spinners[0].style.animationPlayState === "running" ||
+          !spinners[0].style.animationPlayState
+        ) {
+          spinners.forEach((spinner) => {
+            spinner.style.animationPlayState = "paused";
+          });
+          spinners[2].textContent = "paused";
+        } else {
+          spinners.forEach((spinner) => {
+            spinner.style.animationPlayState = "running";
+            spinners[2].textContent = "running";
+          });
+        }
+      });
+    </script>
   </body>
 </html>

@@ -1,0 +1,35 @@
+div.rotate-boxes-container,
+div.rotate-boxes-container > .inner-box,
+div.rotate-boxes-container > .inner-box > .inner-inner-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+div.rotate-boxes-container {
+  width: 160px;
+  height: 160px;
+  background-color: dodgerblue;
+  animation: spin-boxes 5s linear 0s infinite;
+}
+
+div.rotate-boxes-container > .inner-box {
+  width: 120px;
+  height: 120px;
+  background-color: firebrick;
+  animation: spin-boxes 6s linear 0s infinite;
+}
+
+div.rotate-boxes-container > .inner-box > .inner-inner-box {
+  width: 80px;
+  height: 80px;
+  background-color: hotpink;
+  animation: spin-boxes 7s linear 0s infinite;
+}
+
+@keyframes spin-boxes {
+  to {
+    transform: rotate(360deg);
+  }
+}
