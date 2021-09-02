@@ -1,0 +1,63 @@
+.image-container {
+  position: absolute;
+  left: 60px;
+
+  top: 1060px;
+}
+
+img {
+  cursor: pointer;
+  width: 200px;
+  height: 300px;
+  object-fit: cover;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  transition: transform 2s;
+  transform-origin: left bottom;
+}
+
+.image-container:hover > img:first-of-type {
+  transform: rotate(-10deg);
+}
+
+.image-container:hover > img:nth-of-type(2) {
+  transform: rotate(10deg);
+}
+
+.image-container:hover > img:nth-of-type(3) {
+  transform: rotate(20deg);
+}
+
+.image-container:hover > img:nth-of-type(4) {
+  transform: rotate(30deg);
+}
+
+.image-container:hover > img:last-of-type {
+  transform: rotate(40deg);
+}
+
+.image-container:hover > img:first-of-type:hover {
+  transform: rotate(-10deg) scale(1.2);
+  z-index: 1;
+}
+
+.image-container:hover > img:nth-of-type(2):hover {
+  transform: rotate(10deg) scale(1.2);
+  z-index: 1;
+}
+
+.image-container:hover > img:nth-of-type(3):hover {
+  transform: rotate(20deg) scale(1.2);
+  z-index: 1;
+}
+
+.image-container:hover > img:nth-of-type(4):hover {
+  transform: rotate(30deg) scale(1.2);
+  z-index: 1;
+}
+
+.image-container:hover > img:last-of-type:hover {
+  transform: rotate(40deg) scale(1.2);
+  z-index: 1;
+}
